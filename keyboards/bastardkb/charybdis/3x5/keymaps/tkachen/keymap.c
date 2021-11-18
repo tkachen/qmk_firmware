@@ -119,7 +119,7 @@
 // ╭─────┬─────┬─────┬─────┬─────╮                        ╭─────┬─────┬─────┬─────┬─────╮
 // │ ESC │     │     │     │     │                        │     │     │     │     │     │
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
-// │ GUI │ ALT │ CTL │ SFT │     │                        │     │     │     │     │     │
+// │ GUI │ ALT │ CTL │ SFT │     │                        │     │ SFT │ CTL │ ALT │ GUI │
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
 // │ --- │SCRLL│     │     │     │                        │     │ BT1 │ BT2 │ BT3 │ --- │
 // ╰─────┴─────┴─────┴──┬──┴──┬──┴──┬─────╮      ╭─────┬──┴──┬──┴─────┴─────┴─────┴─────╯
@@ -127,7 +127,7 @@
 //                      ╰─────┴─────┴─────╯      ╰─────┴─────╯
 #define LAYER_MOUSE \
   KC_ESC,   KC_NO,    KC_NO,    KC_NO,    KC_NO,       KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,   \
-  KC_LGUI,  KC_LALT,  KC_LCTL,  KC_LSFT,  KC_NO,       KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,   \
+  KC_LGUI,  KC_LALT,  KC_LCTL,  KC_LSFT,  KC_NO,       KC_NO,  KC_LSFT,  KC_LCTL,  KC_LALT,  KC_LGUI, \
   _______,  MS_SCRL,  KC_NO,    KC_NO,    KC_NO,       KC_NO,  KC_BTN1,  KC_BTN2,  KC_BTN3,  _______, \
                       KC_BTN2,  KC_BTN1,  KC_BTN3,     _______, _______
 
