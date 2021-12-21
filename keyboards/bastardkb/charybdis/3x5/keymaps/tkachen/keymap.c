@@ -11,6 +11,7 @@
 #define _SWITCH  8
 
 #define MS_SCRL DRAG_SCROLL
+#define MIC_MUTE G(A(KC_K)) // Mute microphone, Windows 11 shortcut
 
 #define LAYOUT_CHARYBDIS_NANO(...) LAYOUT_split_3x5_3(__VA_ARGS__, KC_NO)
 
@@ -121,31 +122,31 @@
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
 // │ GUI │ ALT │ CTL │ SFT │     │                        │     │ SFT │ CTL │ ALT │ GUI │
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
-// │ --- │SCRLL│     │     │     │                        │     │ BT1 │ BT2 │ BT3 │ --- │
+// │ --- │SCRLL│     │     │     │                        │     │ BT1 │ BT3 │ BT2 │ --- │
 // ╰─────┴─────┴─────┴──┬──┴──┬──┴──┬─────╮      ╭─────┬──┴──┬──┴─────┴─────┴─────┴─────╯
-//                      │ BT2 │ BT1 │ BT3 │      │ --- │ --- │
+//                      │ BT2 │ BT3 │ BT1 │      │ --- │ --- │
 //                      ╰─────┴─────┴─────╯      ╰─────┴─────╯
 #define LAYER_MOUSE \
   KC_ESC,   KC_NO,    KC_NO,    KC_NO,    KC_NO,       KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,   \
   KC_LGUI,  KC_LALT,  KC_LCTL,  KC_LSFT,  KC_NO,       KC_NO,  KC_LSFT,  KC_LCTL,  KC_LALT,  KC_LGUI, \
-  _______,  MS_SCRL,  KC_NO,    KC_NO,    KC_NO,       KC_NO,  KC_BTN1,  KC_BTN2,  KC_BTN3,  _______, \
-                      KC_BTN2,  KC_BTN1,  KC_BTN3,     _______, _______
+  _______,  MS_SCRL,  KC_NO,    KC_NO,    KC_NO,       KC_NO,  KC_BTN1,  KC_BTN3,  KC_BTN2,  _______, \
+                      KC_BTN2,  KC_BTN3,  KC_BTN1,     _______, _______
 
 
 // MEDIA (+SYS)
 // ╭─────┬─────┬─────┬─────┬─────╮                        ╭─────┬─────┬─────┬─────┬─────╮
-// │PAUSE│ INS │     │     │     │                        │     │     │ BRI-│ BRI+│ SCR │
+// │PAUSE│ INS │ BRI-│ BRI+│     │                        │ MUT │ MIC │ VOL-│ VOL+│ SCR │
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
-// │ GUI │ ALT │ CTL │ SFT │     │                        │ PP  │ RWN │ PRV │ NXT │ FRW │
+// │ GUI │ ALT │ CTL │ SFT │     │                        │     │  ←  │  ↓  │  ↑  │  →  │
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
-// │ HUE │ SAT │ VAL │ SPD │     │                        │ MUT │     │ VOL-│ VOL+│     │
+// │ HUE │ SAT │ VAL │ SPD │     │                        │ PP  │ RWN │ PRV │ NXT │ FRW │
 // ╰─────┴─────┴─────┴──┬──┴──┬──┴──┬─────╮      ╭─────┬──┴──┬──┴─────┴─────┴─────┴─────╯
 //                      │ MOD<│ MOD>│ TOG │      │ --- │ --- │
 //                      ╰─────┴─────┴─────╯      ╰─────┴─────╯
 #define LAYER_MEDIA \
-  KC_PAUS,  KC_INS,   KC_NO,    KC_NO,    KC_NO,        KC_NO,    KC_NO,    KC_BRID,  KC_BRIU,  KC_PSCR, \
-  KC_LGUI,  KC_LALT,  KC_LCTL,  KC_LSFT,  KC_NO,        KC_MPLY,  KC_MRWD,  KC_MPRV,  KC_MNXT,  KC_MFFD, \
-  RGB_HUI,  RGB_SAI,  RGB_VAI,  RGB_SPI,  KC_NO,        KC_MUTE,  KC_NO,    KC_VOLD,  KC_VOLU,  KC_NO,   \
+  KC_PAUS,  KC_INS,   KC_BRID,  KC_BRIU,  KC_NO,        KC_MUTE,  MIC_MUTE, KC_VOLD,  KC_VOLU,  KC_PSCR, \
+  KC_LGUI,  KC_LALT,  KC_LCTL,  KC_LSFT,  KC_NO,        KC_NO,    KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT, \
+  RGB_HUI,  RGB_SAI,  RGB_VAI,  RGB_SPI,  KC_NO,        KC_MPLY,  KC_MRWD,  KC_MPRV,  KC_MNXT,  KC_MFFD, \
                     RGB_RMOD,  RGB_MOD,  RGB_TOG,       _______, _______
 
 
