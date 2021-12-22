@@ -137,7 +137,7 @@
 // ╭─────┬─────┬─────┬─────┬─────╮                        ╭─────┬─────┬─────┬─────┬─────╮
 // │PAUSE│ INS │ BRI-│ BRI+│     │                        │ MUT │ MIC │ VOL-│ VOL+│ SCR │
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
-// │ GUI │ ALT │ CTL │ SFT │     │                        │     │  ←  │  ↓  │  ↑  │  →  │
+// │ GUI │ ALT │ CTL │ SFT │     │                        │ ENT │  ←  │  ↓  │  ↑  │  →  │
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
 // │ HUE │ SAT │ VAL │ SPD │     │                        │ PP  │ RWN │ PRV │ NXT │ FRW │
 // ╰─────┴─────┴─────┴──┬──┴──┬──┴──┬─────╮      ╭─────┬──┴──┬──┴─────┴─────┴─────┴─────╯
@@ -145,7 +145,7 @@
 //                      ╰─────┴─────┴─────╯      ╰─────┴─────╯
 #define LAYER_MEDIA \
   KC_PAUS,  KC_INS,   KC_BRID,  KC_BRIU,  KC_NO,        KC_MUTE,  MIC_MUTE, KC_VOLD,  KC_VOLU,  KC_PSCR, \
-  KC_LGUI,  KC_LALT,  KC_LCTL,  KC_LSFT,  KC_NO,        KC_NO,    KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT, \
+  KC_LGUI,  KC_LALT,  KC_LCTL,  KC_LSFT,  KC_NO,        KC_ENT,   KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT, \
   RGB_HUI,  RGB_SAI,  RGB_VAI,  RGB_SPI,  KC_NO,        KC_MPLY,  KC_MRWD,  KC_MPRV,  KC_MNXT,  KC_MFFD, \
                     RGB_RMOD,  RGB_MOD,  RGB_TOG,       _______, _______
 
