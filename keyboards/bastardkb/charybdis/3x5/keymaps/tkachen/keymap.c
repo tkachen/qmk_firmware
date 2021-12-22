@@ -122,15 +122,15 @@
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
 // │ GUI │ ALT │ CTL │ SFT │     │                        │     │ SFT │ CTL │ ALT │ GUI │
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
-// │ --- │SCRLL│     │     │     │                        │     │ BT1 │ BT3 │ BT2 │ --- │
+// │ --- │SCRLL│     │     │     │                        │     │ BT1 │ BT2 │ BT3 │ --- │
 // ╰─────┴─────┴─────┴──┬──┴──┬──┴──┬─────╮      ╭─────┬──┴──┬──┴─────┴─────┴─────┴─────╯
-//                      │ BT2 │ BT3 │ BT1 │      │ --- │ --- │
+//                      │ BT3 │ BT2 │ BT1 │      │ --- │ --- │
 //                      ╰─────┴─────┴─────╯      ╰─────┴─────╯
 #define LAYER_MOUSE \
   KC_ESC,   KC_NO,    KC_NO,    KC_NO,    KC_NO,       KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,   \
   KC_LGUI,  KC_LALT,  KC_LCTL,  KC_LSFT,  KC_NO,       KC_NO,  KC_LSFT,  KC_LCTL,  KC_LALT,  KC_LGUI, \
-  _______,  MS_SCRL,  KC_NO,    KC_NO,    KC_NO,       KC_NO,  KC_BTN1,  KC_BTN3,  KC_BTN2,  _______, \
-                      KC_BTN2,  KC_BTN3,  KC_BTN1,     _______, _______
+  _______,  MS_SCRL,  KC_NO,    KC_NO,    KC_NO,       KC_NO,  KC_BTN1,  KC_BTN2,  KC_BTN3,  _______, \
+                      KC_BTN3,  KC_BTN2,  KC_BTN1,     _______, _______
 
 
 // MEDIA (+SYS)
@@ -154,20 +154,20 @@
 // ╭─────┬─────┬─────┬─────┬─────╮                        ╭─────┬─────┬─────┬─────┬─────╮
 // │ TAB │  Q  │  W  │  E  │  R  │                        │     │     │     │     │     │
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
-// │ SFT │  A  │  S  │  D  │  F  │                        │     │     │     │     │     │
+// │ SFT │  A  │  S  │  D  │  F  │                        │ SFT │     │  ↑  │     │     │
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
-// │ CTL │  Z  │  X  │  C  │  V  │                        │     │     │     │     │     │
+// │ CTL │  Z  │  X  │  C  │  V  │                        │ CTL │  ←  │  ↓  │  →  │     │
 // ╰─────┴─────┴─────┴──┬──┴──┬──┴──┬─────╮      ╭─────┬──┴──┬──┴─────┴─────┴─────┴─────╯
-//                      │ ESC │ SPC │ ENT │      │     │     │
+//                      │ ESC │ SPC │ ENT │      │ ENT │ SPC │
 //                      ╰─────┴─────┴─────╯      ╰─────┴─────╯
 #define LAYER_GAME_WASD \
-  KC_TAB,   KC_Q,  KC_W,  KC_E,  KC_R,        KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO, \
-  KC_LSFT,  KC_A,  KC_S,  KC_D,  KC_F,        KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO, \
-  KC_LCTL,  KC_Z,  KC_X,  KC_C,  KC_V,        KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO, \
-  LT(_SWITCH, KC_ESC),  KC_SPC,  KC_ENT,      KC_NO,  KC_NO
+  KC_TAB,   KC_Q,  KC_W,  KC_E,  KC_R,        KC_NO,    KC_NO,    KC_NO,   KC_NO,    KC_NO, \
+  KC_LSFT,  KC_A,  KC_S,  KC_D,  KC_F,        KC_RSFT,  KC_NO,    KC_UP,   KC_NO,    KC_NO, \
+  KC_LCTL,  KC_Z,  KC_X,  KC_C,  KC_V,        KC_RCTL,  KC_LEFT,  KC_DOWN, KC_RGHT,  KC_NO, \
+  LT(_SWITCH, KC_ESC),  KC_SPC,  KC_ENT,      KC_ENT,  KC_SPC
 
 
-// GAME 2 - QWERT
+// GAME 2 - QWERT (DOTA)
 // ╭─────┬─────┬─────┬─────┬─────╮                        ╭─────┬─────┬─────┬─────┬─────╮
 // │  Q  │  W  │  E  │  R  │  T  │                        │     │     │     │     │     │
 // ├─────┼─────┼─────┼─────┼─────┤                        ├─────┼─────┼─────┼─────┼─────┤
